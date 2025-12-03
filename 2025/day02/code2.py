@@ -1,5 +1,3 @@
-from functools import reduce
-
 def recursive_check(prefix, num_as_str, length):
     if (len(num_as_str) == 0):
         return True
@@ -17,7 +15,6 @@ def calc_repeating_numbers(start, end):
 
         for j in range(1, (len(num_as_str) // 2) + 1):
             prefix = num_as_str[0:j]
-            # print(f"number {num} - prefix {prefix}:")
 
             if (recursive_check(prefix, num_as_str, j)):
                 values.add(num)
