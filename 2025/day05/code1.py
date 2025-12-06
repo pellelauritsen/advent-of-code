@@ -6,15 +6,15 @@ ids = []
 with open('input.txt', 'r') as file:
     lines = [line.rstrip('\n') for line in file]
 
-    for line in lines:
-        if not is_ids and len(line) == 0:
-            is_ids = True
-            continue
+for line in lines:
+    if not is_ids and len(line) == 0:
+        is_ids = True
+        continue
 
-        if not is_ids:
-            fresh_ranges.append(list(map(int, line.split("-"))))
-        else:
-            ids.append(int(line))
+    if not is_ids:
+        fresh_ranges.append(list(map(int, line.split("-"))))
+    else:
+        ids.append(int(line))
 
 running_sum = 0
 

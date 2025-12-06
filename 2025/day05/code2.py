@@ -5,12 +5,12 @@ fresh_ranges = []
 with open('input.txt', 'r') as file:
     lines = [line.rstrip('\n') for line in file]
 
-    for line in lines:
-        if len(line) == 0:
-            break
+for line in lines:
+    if len(line) == 0:
+        break
 
-        if not is_ids:
-            fresh_ranges.append(list(map(int, line.split("-"))))
+    if not is_ids:
+        fresh_ranges.append(list(map(int, line.split("-"))))
 
 new_range = []
 fresh_ranges.sort(key=lambda x: x[0])
