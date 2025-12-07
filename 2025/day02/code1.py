@@ -15,14 +15,14 @@ def calc_repeating_numbers(start, end):
 with open('input.txt', 'r') as file:
     lines = [line.rstrip('\n') for line in file]
 
-    running_sum = 0
+running_sum = 0
 
-    for line in lines:
-        for part in line.split(','):
-            begin, end = map(int, part.split('-'))
-            val = calc_repeating_numbers(begin, end)
+for line in lines:
+    for part in line.split(','):
+        begin, end = map(int, part.split('-'))
+        val = calc_repeating_numbers(begin, end)
 
-            if (val):
-                running_sum += val
+        if (val):
+            running_sum += val
 
-    print("Sum:", running_sum)
+print("Sum:", running_sum)

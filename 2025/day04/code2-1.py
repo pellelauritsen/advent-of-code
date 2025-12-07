@@ -7,9 +7,9 @@ a = []
 with open('input.txt', 'r') as file:
     lines = [line.rstrip('\n') for line in file]
 
-    for line in lines:
-        l = [EMPTY_SPACE] + list(line) + [EMPTY_SPACE]
-        a.append(l)
+for line in lines:
+    l = [EMPTY_SPACE] + list(line) + [EMPTY_SPACE]
+    a.append(l)
 
 a.insert(0, list(EMPTY_SPACE * len(a[0])))
 a.append(list(EMPTY_SPACE * len(a[0])))
@@ -39,9 +39,6 @@ while y < height:
 
     y = new_y if rerun else y + 1
     rerun = False
-
-# for y in range(0, height):
-#     print(y, a[y],"\n")
 
 print("Sum:",running_sum)
 print("Calculated rows:", calc_rows)

@@ -16,11 +16,11 @@ def find_jolt_number(s, length=12):
 with open('input.txt', 'r') as file:
     lines = [line.rstrip('\n') for line in file]
 
-    running_sum = 0
+running_sum = 0
 
-    for line in lines:
-        jn = find_jolt_number(line)
-        print(f"Jolt number for line {line} is {jn}")
-        running_sum += int(jn)
+for line in lines:
+    jn = find_jolt_number(line)
+    print(f"Jolt number for line {line} is {jn}")
+    running_sum += int(jn)
 
-    print("Sum:", running_sum)
+print("Sum:", running_sum)
